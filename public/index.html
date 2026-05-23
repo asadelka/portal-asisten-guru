@@ -304,6 +304,10 @@ body::before {
 .opt[data-val="Seni & Desain"].selected i { color: var(--sky); }
 .opt[data-val="Pendidikan & Humaniora"].selected { border-color: var(--green); background: var(--green-bg); }
 .opt[data-val="Pendidikan & Humaniora"].selected i { color: var(--green); }
+.opt[data-val="Kuliner & Boga"].selected { border-color: var(--amber); background: var(--amber-bg); }
+.opt[data-val="Kuliner & Boga"].selected i { color: var(--amber); }
+.opt[data-val="Kecantikan & Tata Rias"].selected { border-color: var(--rose); background: var(--rose-bg); }
+.opt[data-val="Kecantikan & Tata Rias"].selected i { color: var(--rose); }
 
 .opt-pill { min-width: unset; flex: unset; padding: 8px 14px; border-radius: 24px; font-size: 13px; gap: 7px; }
 .opt-pill i { font-size: 16px; }
@@ -525,6 +529,12 @@ body::before {
             Cek Jurusan
           </a>
         </li>
+        <li>
+          <a href='https://snpmb.id/' onclick='window.open(this.href, &quot;_blank&quot;); return false;' target='_blank'>
+            <svg fill='none' height='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='16'><path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>
+            Portal SNPMB
+          </a>
+        </li>
         <li class='logout-item'>
           <a class='btn-logout-nav' href='#' onclick='logout(); return false;'>
             <svg fill='none' height='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='16'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' x2='9' y1='12' y2='12'/></svg>
@@ -609,6 +619,8 @@ body::before {
               <button class='opt' data-val='Pertanian &amp; Lingkungan' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-leaf'></i><span class='opt-label'><span class='opt-name'>Pertanian &amp; Lingkungan</span><span class='opt-sub'>Agribisnis, Kehutanan, Perikanan</span></span></button>
               <button class='opt' data-val='Keagamaan &amp; Dakwah' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-book'></i><span class='opt-label'><span class='opt-name'>Keagamaan &amp; Dakwah</span><span class='opt-sub'>Syariah, Ushuluddin, PAI, Dakwah</span></span></button>
               <button class='opt' data-val='Kebahasaan &amp; Sastra' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-language'></i><span class='opt-label'><span class='opt-name'>Kebahasaan &amp; Sastra</span><span class='opt-sub'>Linguistik, Sastra, Penerjemahan</span></span></button>
+              <button class='opt' data-val='Kuliner &amp; Boga' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-chef-hat'></i><span class='opt-label'><span class='opt-name'>Kuliner &amp; Boga</span><span class='opt-sub'>Teknologi Pangan, Gizi, Tata Boga</span></span></button>
+              <button class='opt' data-val='Kecantikan &amp; Tata Rias' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-sparkles'></i><span class='opt-label'><span class='opt-name'>Kecantikan &amp; Tata Rias</span><span class='opt-sub'>Kosmetika, Tata Rias, Estetika</span></span></button>
               <button class='opt' data-val='Belum tahu' onclick='pick(this,&quot;minat&quot;)'><i class='ti ti-compass'></i><span class='opt-label'><span class='opt-name'>Belum yakin</span><span class='opt-sub'>Mau eksplorasi lebih dulu</span></span></button>
             </div>
             <div class='nav'><button class='nav-back' onclick='back(1)'>&#8592; Kembali</button><button class='nav-next' onclick='next(3)'>Lanjut &#8594;</button></div>
@@ -644,9 +656,8 @@ body::before {
               <button class='opt opt-pill' data-val='Fikih' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-scale'></i> Fikih</button>
               <button class='opt opt-pill' data-val='Sejarah Kebudayaan Islam' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-hourglass'></i> SKI</button>
               <button class='opt opt-pill' data-val='Bahasa Arab' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-alphabet-arabic'></i> Bahasa Arab</button>
-              <button class='opt opt-pill' data-val='Tafsir' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-book-2'></i> Tafsir</button>
-              <button class='opt opt-pill' data-val='Hadis' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-books'></i> Hadis</button>
               <button class='opt opt-pill' data-val='Ilmu Kalam' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-bulb'></i> Ilmu Kalam</button>
+              <button class='opt opt-pill' data-val='Baca Kitab Kuning' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-book-2'></i> Baca Kitab Kuning</button>
               <button class='opt opt-pill' data-val='Bahasa Arab Peminatan' onclick='pickMulti(this,&quot;mapel&quot;)' style='border-color:rgba(201,168,76,0.3)'><i class='ti ti-language'></i> B.Arab Peminatan</button>
             </div>
             <div style='margin-top:14px;padding:10px 14px;background:rgba(176,126,248,0.08);border:1px solid rgba(176,126,248,0.25);border-radius:10px;font-size:12px;color:var(--text3);font-weight:600;letter-spacing:0.03em;text-transform:uppercase'>⚑ Mapel Peminatan Bahasa</div>
@@ -726,6 +737,8 @@ body::before {
               <button class='opt' data-val='Bekerja di sektor pertanian & lingkungan' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-leaf'></i><span class='opt-label'><span class='opt-name'>Pertanian &amp; lingkungan</span><span class='opt-sub'>Agronomi, kehutanan, lingkungan hidup</span></span></button>
               <button class='opt' data-val='Berkarier di dunia olahraga' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-trophy'></i><span class='opt-label'><span class='opt-name'>Olahraga &amp; kebugaran</span><span class='opt-sub'>Atlet, pelatih, fisioterapis, sport analyst</span></span></button>
               <button class='opt' data-val='Bekerja di bidang pariwisata & perhotelan' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-plane'></i><span class='opt-label'><span class='opt-name'>Pariwisata &amp; perhotelan</span><span class='opt-sub'>Pemandu wisata, manajer hotel, event org.</span></span></button>
+              <button class='opt' data-val='Berkarier di industri kuliner & pangan' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-chef-hat'></i><span class='opt-label'><span class='opt-name'>Kuliner &amp; pangan</span><span class='opt-sub'>Chef, food technologist, ahli gizi, F&B</span></span></button>
+              <button class='opt' data-val='Berkarier di industri kecantikan & estetika' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-sparkles'></i><span class='opt-label'><span class='opt-name'>Kecantikan &amp; estetika</span><span class='opt-sub'>MUA, skin therapist, kosmetikolog, salon</span></span></button>
               <button class='opt' data-val='Belum tahu' onclick='pick(this,&quot;karier&quot;)'><i class='ti ti-dots'></i><span class='opt-label'><span class='opt-name'>Belum ada gambaran</span><span class='opt-sub'>Masih ingin eksplorasi lebih dalam</span></span></button>
             </div>
             <div class='nav'><button class='nav-back' onclick='back(5)'>&#8592; Kembali</button><button class='nav-next' onclick='next(7)'>Lanjut &#8594;</button></div>
@@ -786,7 +799,7 @@ body::before {
                 <button class='btn-primary' id='btn-analisis-ai' onclick='analisisDenganAI()' style='background:var(--violet);width:auto;padding:10px 22px;font-size:13px'><i class='ti ti-sparkles'></i> Jalankan Analisis Groq AI</button>
                 <div id='ai-loading' style='display:none;margin-top:15px;color:var(--text2);font-size:13px'><i class='ti ti-loader-2' style='animation:spin-ai 1.2s linear infinite;display:inline-block;margin-right:6px;color:var(--violet)'></i>Sedang merumuskan rencana adaptasi belajar...</div>
                 <div id='ai-result-box' style='margin-top:20px;display:none;line-height:1.7;color:var(--text2);font-size:13.5px;background:rgba(255,255,255,0.01);padding:18px;border-radius:8px;border:1px dashed var(--border2)'></div>
-                <button class='btn-primary' id='btn-print-ai' onclick='printAI()' style='display:none;margin-top:12px;background:linear-gradient(135deg,var(--violet),#a465f5);width:auto;padding:10px 22px;font-size:13px'><i class='ti ti-printer'></i> Cetak Hasil Analisis AI</button>
+
               </div>
             </div>
             <button class='btn-primary' onclick='printResult()'><i class='ti ti-file-type-pdf'></i> Cetak / Simpan PDF (Lengkap + AI)</button>
@@ -822,6 +835,7 @@ var DB_PRODI = [["No","Rumpun Ilmu","Kelompok","Program Studi","Gelar D3","Gelar
 // Untuk menambah/ubah akun: gunakan tools/hash-password.html
 // Format: { username: "nama", hash: "sha256_dari_password" }
 var AKUN_LOGIN = [
+  { username: "tamu", hash: "2383047ffaf501c69af6dd17ddc5e2aa1a84411367598da2c26a6b57571bca50" },
   { username: "admin", hash: "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9" },
   { username: "guru",  hash: "800717bd763ba72fe56d53ba633e5bbf848345c4a92a12c17de3e4b2ea7a382d" },
   { username: "bk",    hash: "57b79b1c67fa9d3eb4d4e2ce772ee0df6fb748aee3d1ebab1e28498987fba28b" }
@@ -1105,16 +1119,16 @@ const DATA = {
     prodiGrup:'Agribisnis · Agroteknologi · Kehutanan · Perikanan · Ilmu Lingkungan · Teknologi Pangan',
     prodiBody:'Lebih dari <strong>80 program studi</strong> di rumpun ini. Agribisnis dan Teknologi Pangan adalah yang paling dicari industri. Kehutanan dan Ilmu Lingkungan sangat relevan di era pembangunan berkelanjutan.',
     prodiChips:['Agribisnis','Agroteknologi','Kehutanan','Manajemen Sumberdaya Lahan','Teknologi Pangan','Perikanan','Ilmu Lingkungan','Budidaya Perairan','Teknik Pertanian','Hortikultura','Peternakan','Agroekoteknologi'],
-    insightKarier:{'Bekerja di laboratorium / penelitian':'Ilmu Tanah, Bioteknologi Pertanian, dan Teknologi Pangan menawarkan karier riset di Kementan dan BRIN.','Membantu orang sakit / sehat':'Teknologi Pangan dan Gizi bersinggungan langsung dengan keamanan pangan dan kesehatan masyarakat.','Menjalankan bisnis sendiri':'Agribisnis adalah prodi yang langsung relevan untuk berwirausaha di sektor pangan dan pertanian.','Bekerja di sektor pertanian & lingkungan':'Agroteknologi, Kehutanan, dan Ilmu Lingkungan adalah jalur langsung ke profesi yang menjaga kelestarian alam Indonesia.','Bekerja di pemerintahan / pelayanan publik':'Banyak lulusan pertanian berkarier di Kementan, BPPT, BNPB, dan Dinas Lingkungan Hidup daerah.','Berkebun, memasak, atau merawat hewan':'Peternakan, Hortikultura, dan Ilmu Kelautan adalah pilihan ideal untuk kamu yang mencintai alam dan makhluk hidup.','default':'Rumpun ini sangat strategis untuk ketahanan pangan nasional — prospek karier di BUMN dan Kementerian terbuka lebar.'},
+    insightKarier:{'Bekerja di laboratorium / penelitian':'Ilmu Tanah, Bioteknologi Pertanian, dan Teknologi Pangan menawarkan karier riset di Kementan dan BRIN.','Membantu orang sakit / sehat':'Teknologi Pangan dan Gizi bersinggungan langsung dengan keamanan pangan dan kesehatan masyarakat.','Menjalankan bisnis sendiri':'Agribisnis adalah prodi yang langsung relevan untuk berwirausaha di sektor pangan dan pertanian.','Bekerja di sektor pertanian & lingkungan':'Agroteknologi, Kehutanan, dan Ilmu Lingkungan adalah jalur langsung ke profesi yang menjaga kelestarian alam Indonesia.','Bekerja di pemerintahan / pelayanan publik':'Banyak lulusan pertanian berkarier di Kementan, BPPT, BNPB, dan Dinas Lingkungan Hidup daerah.','Berkebun, memasak, atau merawat hewan':'Peternakan, Hortikultura, dan Ilmu Kelautan adalah pilihan ideal untuk kamu yang mencintai alam dan makhluk hidup.','Berkarier di industri kuliner & pangan':'Teknologi Pangan dan Agribisnis bersinggungan langsung dengan rantai industri pangan — dari bahan baku pertanian hingga produk konsumen. Biologi dan Kimia adalah fondasi akademik yang perlu diperkuat.','Berkarier di industri kecantikan & estetika':'Bioteknologi Pertanian memiliki irisan dengan riset bahan kosmetik organik dan herbal — potensi karier di industri kecantikan berbasis bahan alam Indonesia.','default':'Rumpun ini sangat strategis untuk ketahanan pangan nasional — prospek karier di BUMN dan Kementerian terbuka lebar.'},
     nextTitle:'Tiga langkah konkret untuk kamu',
     nextBody:'① Tentukan arah: produksi (Agroteknologi), bisnis (Agribisnis), atau lingkungan (Kehutanan/Ilmu Lingkungan)? ② Perkuat <strong>Biologi dan Kimia</strong> sebagai fondasi utama. ③ Eksplorasi beasiswa di IPB University — kampus pertanian terbaik Indonesia.'
   },
   'Keagamaan & Dakwah': {
     color:'#c9a84c',colorBg:'rgba(201,168,76,0.12)',colorBorder:'rgba(201,168,76,0.4)',
     icon:'ti-book',
-    mapelUtama:['Pendidikan Agama','Bahasa Arab'],mapelPendukung:['Sosiologi','Bahasa Indonesia Lanjut'],
-    mapelTitle:'Pendidikan Agama + Bahasa Arab',
-    mapelWhy:'<strong>Pendidikan Agama</strong> dan <strong>Bahasa Arab</strong> adalah dua mapel inti yang mendukung seluruh rumpun studi keislaman — dari Syariah, Ushuluddin, Dakwah, hingga Pendidikan Agama Islam. Bahasa Arab penting karena sebagian besar sumber primer keilmuan Islam berbasis teks Arab. <strong>Sosiologi</strong> mendukung kajian kemasyarakatan dan dakwah kontekstual.',
+    mapelUtama:['Al-Quran Hadis','Bahasa Arab','Fikih'],mapelPendukung:['Aqidah Akhlak','Sejarah Kebudayaan Islam','Baca Kitab Kuning','Sosiologi','Bahasa Indonesia Lanjut'],
+    mapelTitle:'Al-Quran Hadis + Bahasa Arab + Fikih',
+    mapelWhy:'<strong>Al-Quran Hadis</strong>, <strong>Bahasa Arab</strong>, dan <strong>Fikih</strong> adalah tiga mapel inti kurikulum madrasah yang menjadi fondasi seluruh rumpun studi keislaman — dari Syariah, Ushuluddin, Dakwah, hingga Pendidikan Agama Islam (PAI). Bahasa Arab sangat penting karena seluruh sumber primer keilmuan Islam berbasis teks Arab klasik. <strong>Baca Kitab Kuning</strong> menjadi nilai tambah yang sangat kuat — kemampuan membaca teks Arab gundul (kitab klasik) adalah modal akademik dan spiritual yang membedakan lulusan madrasah. <strong>Aqidah Akhlak</strong> dan <strong>SKI</strong> memperkuat pemahaman akidah dan konteks sejarah Islam. <strong>Sosiologi</strong> mendukung kajian dakwah kontekstual dan kemasyarakatan.',
     prodiGrup:'Pendidikan Agama Islam · Syariah & Hukum Islam · Ushuluddin · Dakwah & Komunikasi Islam · Ekonomi Syariah · Manajemen Pendidikan Islam',
     prodiBody:'Tersedia di seluruh <strong>UIN, IAIN, dan STAIN</strong> di Indonesia — lebih dari <strong>150 program studi</strong>. Banyak prodi kini membuka jalur profesional: Hukum Keluarga Islam, Perbankan Syariah, Manajemen Zakat & Wakaf, dan Konseling Islam.',
     prodiChips:['Pendidikan Agama Islam','Syariah','Hukum Keluarga Islam','Ushuluddin','Dakwah','Komunikasi Penyiaran Islam','Ekonomi Syariah','Perbankan Syariah','Manajemen Pendidikan Islam','Ilmu Al-Quran & Tafsir','Sejarah & Kebudayaan Islam','Bimbingan & Konseling Islam'],
@@ -1125,10 +1139,10 @@ const DATA = {
       'Bekerja di bidang agama & dakwah':'Dakwah, Ilmu Al-Quran & Tafsir, dan Komunikasi Penyiaran Islam adalah jalur langsung untuk menjadi dai, penyuluh agama, atau konsultan keislaman.',
       'Bekerja di bidang sosial & kemanusiaan':'Bimbingan dan Konseling Islam serta Kesejahteraan Sosial Islam sangat relevan di lembaga zakat, wakaf, dan filantropi Islam.',
       'Berkarier di keuangan & perbankan':'Perbankan Syariah dan Ekonomi Syariah membuka peluang karier di bank syariah, OJK, dan lembaga keuangan Islam internasional.',
-      'default':'Kemampuan membaca teks Arab klasik dan memahami konteks keislaman adalah keunggulan kompetitif yang sangat berharga di rumpun ini.'
+      'default':'Kemampuan membaca teks Arab klasik (Kitab Kuning) dan memahami konteks keislaman adalah keunggulan kompetitif yang sangat berharga dan membedakan lulusan madrasah di rumpun ini.'
     },
     nextTitle:'Tiga langkah konkret untuk kamu',
-    nextBody:'① Perkuat kemampuan <strong>Bahasa Arab</strong> — baik kosakata maupun nahwu-shorof sebagai fondasi membaca teks keislaman. ② Tentukan arah: apakah ke jalur keilmuan (Ushuluddin/Syariah), pendidikan (PAI), atau profesional (Ekonomi Syariah)? ③ Eksplorasi UIN terbaik di Indonesia dan program beasiswa Kemenag.'
+    nextBody:'① Perkuat kemampuan <strong>Bahasa Arab</strong> — kosakata dan nahwu-shorof adalah fondasi mutlak untuk membaca teks keislaman klasik maupun kontemporer. ② Maksimalkan nilai rapor mapel <strong>Al-Quran Hadis, Fikih, dan Aqidah Akhlak</strong> — ketiganya menjadi indikator kesiapan akademik di jalur SNBP untuk prodi UIN/IAIN. ③ Kemampuan <strong>Baca Kitab Kuning</strong> adalah keunggulan kompetitif nyata yang membedakanmu dari siswa SMA umum — asah terus melalui kajian dan musyawarah kitab. ④ Tentukan arah spesifik: jalur keilmuan (Ushuluddin/Syariah), pendidikan (PAI/MPI), profesional (Ekonomi Syariah/Perbankan Syariah), atau dakwah (KPI/Dakwah). ⑤ Eksplorasi UIN terbaik di Indonesia dan program beasiswa Kemenag melalui <strong>pta.kemenag.go.id</strong>.'
   },
   'Kebahasaan & Sastra': {
     color:'#b07ef8',colorBg:'rgba(176,126,248,0.12)',colorBorder:'rgba(176,126,248,0.4)',
@@ -1151,6 +1165,48 @@ const DATA = {
     },
     nextTitle:'Tiga langkah konkret untuk kamu',
     nextBody:'① Tentukan bahasa dan jalur spesifik: Sastra Indonesia (kreatif/akademik), Sastra Inggris (global), atau Sastra Arab (keislaman/diplomatik). ② Mulai bangun portofolio tulisan — blog, esai, terjemahan — sebagai bukti kemampuan. ③ Eksplorasi prodi <strong>Linguistik Komputasional</strong> atau <strong>Penerjemahan</strong> yang prospeknya sangat tinggi di era AI.'
+  },
+  'Kuliner & Boga': {
+    color:'var(--amber)',colorBg:'rgba(249,168,48,0.12)',colorBorder:'rgba(249,168,48,0.45)',
+    icon:'ti-chef-hat',
+    mapelUtama:['Kimia','Biologi'],mapelPendukung:['Matematika','Ekonomi','Seni Budaya'],
+    mapelTitle:'Kimia + Biologi (atau Matematika & Ekonomi)',
+    mapelWhy:'<strong>Kimia</strong> adalah fondasi utama untuk memahami proses pengolahan pangan, bahan tambahan makanan, dan ilmu gizi — wajib untuk prodi Teknologi Pangan dan Gizi. <strong>Biologi</strong> menopang pemahaman tentang bahan hayati, mikrobiologi pangan, dan keamanan pangan. <strong>Matematika</strong> relevan untuk kalkulasi resep, costing usaha kuliner, dan analitik bisnis restoran. <strong>Ekonomi</strong> penting untuk jalur kewirausahaan kuliner dan manajemen F&B.',
+    prodiGrup:'Teknologi Pangan · Gizi · Tata Boga · Kuliner · Agribisnis · Manajemen Perhotelan (F&B)',
+    prodiBody:'Lebih dari <strong>60 program studi</strong> di rumpun ini. Prodi Teknologi Pangan dan Gizi tersedia di universitas negeri besar. Prodi Tata Boga dan Kuliner banyak tersedia di Politeknik, POLIWANGI, POLTEKPAR, dan SMK yang terintegrasi ke D3/D4. Industri kuliner Indonesia adalah salah satu sektor paling tumbuh dan tahan resesi.',
+    prodiChips:['Teknologi Pangan','Gizi','Tata Boga','Kuliner','Manajemen Bisnis Kuliner','Agribisnis','Manajemen Perhotelan','Sains Pangan','Ilmu Gizi','Food Technology','Bisnis Kuliner','Teknik Pangan'],
+    insightKarier:{
+      'Menjalankan bisnis sendiri':'Manajemen Bisnis Kuliner dan Tata Boga memberi kamu landasan ilmiah sekaligus praktis untuk membuka usaha F&B, catering, atau restoran sendiri.',
+      'Membantu orang sakit / sehat':'Ilmu Gizi dan Teknologi Pangan sangat relevan untuk karier sebagai ahli gizi klinis, konsultan diet, atau peneliti keamanan pangan.',
+      'Bekerja di laboratorium / penelitian':'Teknologi Pangan membuka jalur riset di BPOM, BRIN, lembaga uji pangan swasta, atau perusahaan FMCG besar.',
+      'Berkarya di dunia seni / media':'Dunia food photography, food vlogging, dan content creator kuliner sangat menjanjikan — dipadukan dengan prodi Komunikasi atau Multimedia.',
+      'Bekerja di bidang pariwisata & perhotelan':'Prodi Perhotelan (F&B Department) dan Manajemen Wisata Kuliner membuka karier di hotel bintang lima, resort, dan industri pariwisata.',
+      'Bekerja di sektor pertanian & lingkungan':'Teknologi Pangan dan Agribisnis bersinggungan erat dengan rantai pasok pangan dari hulu ke hilir — dari pertanian hingga distribusi produk.',
+      'default':'Industri kuliner adalah salah satu sektor paling dinamis dan tahan krisis. Kombinasi kreativitas dan ilmu pangan membuka peluang sangat luas.'
+    },
+    nextTitle:'Tiga langkah konkret untuk kamu',
+    nextBody:'① Tentukan arah: ilmiah/riset (Teknologi Pangan, Gizi) atau praktis/kreatif (Tata Boga, Kuliner, Manajemen F&B)? ② Perkuat <strong>Kimia dan Biologi</strong> sebagai fondasi akademik utama rumpun ini. ③ Eksplorasi politeknik pariwisata (POLTEKPAR) dan kampus vokasi yang langsung mengarahkan ke industri kuliner profesional.'
+  },
+  'Kecantikan & Tata Rias': {
+    color:'var(--rose)',colorBg:'rgba(249,101,128,0.12)',colorBorder:'rgba(249,101,128,0.45)',
+    icon:'ti-sparkles',
+    mapelUtama:['Kimia','Biologi'],mapelPendukung:['Seni Budaya','Ekonomi','Informatika'],
+    mapelTitle:'Kimia + Biologi (atau Seni Budaya & Ekonomi)',
+    mapelWhy:'<strong>Kimia</strong> adalah pondasi untuk memahami komposisi kosmetik, bahan aktif perawatan kulit, dan keamanan produk kecantikan — wajib untuk prodi Farmasi Kosmetik dan Teknologi Kosmetika. <strong>Biologi</strong> menopang pemahaman tentang anatomi kulit, rambut, dan fisiologi tubuh manusia. <strong>Seni Budaya</strong> relevan untuk jalur estetika, tata rias pengantin, dan desain mode. <strong>Ekonomi</strong> penting untuk kewirausahaan dan manajemen salon/klinik kecantikan. <strong>Informatika</strong> mendukung strategi pemasaran digital dan beauty content creator.',
+    prodiGrup:'Tata Rias & Kecantikan · Farmasi Kosmetik · Teknologi Kosmetika · Kesehatan Kulit · Desain Mode',
+    prodiBody:'Lebih dari <strong>40 program studi</strong> di rumpun ini. Tersedia di Politeknik, POLTEKPAR, dan universitas yang memiliki prodi vokasi. Industri kecantikan Indonesia tumbuh >15% per tahun dan menjadi salah satu pasar terbesar di Asia Tenggara. Prodi baru yang menarik: Teknologi Kosmetika, Farmasi Kosmetik, dan Manajemen Bisnis Kecantikan.',
+    prodiChips:['Tata Rias','Kecantikan Kulit','Kecantikan Rambut','Teknologi Kosmetika','Farmasi Kosmetik','Tata Rias Pengantin','Desain Mode','Manajemen Bisnis Kecantikan','Kesehatan Kulit','Estetika Medis','D3 Kecantikan','D4 Tata Kecantikan'],
+    insightKarier:{
+      'Menjalankan bisnis sendiri':'Manajemen Bisnis Kecantikan dan Tata Rias memberi fondasi untuk membuka salon, klinik kecantikan, atau brand kosmetik sendiri — bidang dengan modal kreativitas tinggi.',
+      'Membantu orang sakit / sehat':'Estetika Medis dan Kesehatan Kulit bersinggungan dengan dunia klinik dermatologi — pilihan karier yang menggabungkan kecantikan dan kesehatan profesional.',
+      'Bekerja di laboratorium / penelitian':'Teknologi Kosmetika dan Farmasi Kosmetik membuka jalur riset formulasi produk di perusahaan kosmetik BPOM-terdaftar atau laboratorium uji produk.',
+      'Berkarya di dunia seni / media':'Beauty content creator, makeup artist profesional, dan fashion stylist adalah karier yang menggabungkan kecantikan dengan kreativitas media digital.',
+      'Berkarier di keuangan & perbankan':'Manajemen Bisnis Kecantikan mempersiapkan kamu untuk mengelola aset, keuangan usaha salon, atau bergabung di perusahaan retail kosmetik besar.',
+      'Bekerja di bidang pariwisata & perhotelan':'Tata Rias Pengantin dan Spa Therapist sangat dibutuhkan di resort, hotel bintang, dan industri wedding organizer.',
+      'default':'Industri kecantikan Indonesia adalah salah satu yang terbesar dan tercepat tumbuh di Asia — kreativitas dan penguasaan ilmu produk adalah kombinasi kunci keberhasilanmu.'
+    },
+    nextTitle:'Tiga langkah konkret untuk kamu',
+    nextBody:'① Tentukan arah: ilmu produk/riset (Teknologi Kosmetika, Farmasi Kosmetik), estetika/seni (Tata Rias, Desain Mode), atau bisnis (Manajemen Kecantikan)? ② Perkuat <strong>Kimia dan Biologi</strong> — keduanya adalah kunci untuk masuk jalur akademik prodi kecantikan berbasis sains. ③ Eksplorasi Politeknik dan kampus vokasi yang memiliki laboratorium kecantikan lengkap serta koneksi langsung ke industri.'
   },
   'Belum tahu': {
     color:'var(--violet)',colorBg:'var(--violet-bg)',colorBorder:'rgba(124,106,247,0.4)',
@@ -1226,10 +1282,19 @@ function showResult() {
   let mismatch = [];
 
   if (m !== 'Belum tahu' && mapels.length > 0) {
-    missingMapels = d.mapelUtama.filter(wajib => !mapels.some(pilih => pilih.toLowerCase().includes(wajib.toLowerCase().split(' ')[0])));
+    // Helper: cek apakah mapel siswa cocok dengan referensi (pencocokan fleksibel)
+    const isMatch = (pilihan, referensi) => {
+      const p = pilihan.toLowerCase();
+      const r = referensi.toLowerCase();
+      // Cocokkan jika referensi ada di dalam pilihan atau sebaliknya
+      // Atau cek kata pertama yang signifikan (min 3 karakter)
+      const rWords = r.split(' ').filter(w => w.length >= 3);
+      return p.includes(r) || r.includes(p) || rWords.some(w => p.includes(w));
+    };
+    missingMapels = d.mapelUtama.filter(wajib => !mapels.some(pilih => isMatch(pilih, wajib)));
     mismatch = mapels.filter(mp => {
       const primary = d.mapelUtama.concat(d.mapelPendukung);
-      return !primary.some(p => mp.toLowerCase().includes(p.toLowerCase().split(' ')[0]));
+      return !primary.some(p => isMatch(mp, p));
     });
     if (missingMapels.length > 0) {
       strategyType = 'ADAPTING';
@@ -1246,7 +1311,14 @@ function showResult() {
   let alignColor = '';
   if (m !== 'Belum tahu' && mapels.length > 0) {
     const totalRef = d.mapelUtama.concat(d.mapelPendukung).length;
-    const matched = mapels.filter(mp => d.mapelUtama.concat(d.mapelPendukung).some(p => mp.toLowerCase().includes(p.toLowerCase().split(' ')[0]))).length;
+    const refList = d.mapelUtama.concat(d.mapelPendukung);
+    const isMatchScore = (pilihan, referensi) => {
+      const p = pilihan.toLowerCase();
+      const r = referensi.toLowerCase();
+      const rWords = r.split(' ').filter(w => w.length >= 3);
+      return p.includes(r) || r.includes(p) || rWords.some(w => p.includes(w));
+    };
+    const matched = mapels.filter(mp => refList.some(p => isMatchScore(mp, p))).length;
     alignScore = totalRef > 0 ? Math.round((matched / totalRef) * 100) : 50;
     if (alignScore >= 70) { alignLabel = 'Tinggi'; alignColor = 'var(--green)'; }
     else if (alignScore >= 40) { alignLabel = 'Sedang'; alignColor = 'var(--amber)'; }
@@ -1314,7 +1386,7 @@ function showResult() {
             ans.aktivitas === 'Berolahraga atau berlatih fisik' ? '<strong>Olahraga & fisik</strong> mencerminkan disiplin dan ketekunan jasmani. Cocok untuk Ilmu Keolahragaan, Fisioterapi, Kedokteran Olahraga, atau Gizi.' :
             ans.aktivitas === 'Bermain game / dunia digital' ? '<strong>Gaming & dunia digital</strong> mencerminkan afinitas kuat dengan teknologi interaktif. Sangat relevan untuk Informatika, Game Design, Animasi, dan E-sport Management.' :
             ans.aktivitas === 'Membaca, menulis, atau berdiskusi agama' ? '<strong>Kajian & literasi agama</strong> mencerminkan jiwa spiritual dan intelektual keislaman yang kuat. Sangat selaras dengan rumpun Keagamaan, Dakwah, Syariah, dan Bahasa Arab.' :
-            ans.aktivitas === 'Berkebun, memasak, atau merawat hewan' ? '<strong>Alam & kehidupan</strong> mencerminkan koneksi kuat dengan makhluk hidup dan lingkungan. Cocok untuk Pertanian, Peternakan, Biologi, dan Teknologi Pangan.' :
+            ans.aktivitas === 'Berkebun, memasak, atau merawat hewan' ? '<strong>Alam & kehidupan</strong> mencerminkan koneksi kuat dengan makhluk hidup, lingkungan, dan dunia kuliner. Cocok untuk Pertanian, Peternakan, Biologi, Teknologi Pangan, Gizi, dan Tata Boga — serta karier sebagai chef profesional, ahli gizi, atau food entrepreneur.' :
             ans.aktivitas === 'Fotografi, videografi, atau content creator' ? '<strong>Foto, video & konten</strong> mencerminkan kreativitas visual dan storytelling digital. Sangat selaras dengan DKV, Film, Komunikasi, dan Seni Rupa.' :
             ans.aktivitas === 'Menulis cerita, puisi, atau blog' ? '<strong>Menulis & bercerita</strong> mencerminkan kemampuan narasi yang kuat. Sangat cocok untuk Sastra, Jurnalistik, Penerjemahan, dan Komunikasi.' :
             'Aktivitasmu mencerminkan ketertarikan dan bakat yang perlu dieksplorasi lebih jauh bersama konselor.'}
@@ -1725,21 +1797,23 @@ async function analisisDenganAI() {
   btn.style.display = 'none';
   loading.style.display = 'block';
   resultBox.style.display = 'none';
+  const systemPrompt = `Kamu adalah Pakar Konseling Karir dan Guru BK yang profesional. Tugasmu menganalisis data instrumen siswa dan menyusun rekomendasi berbasis "ADAPTING STRATEGY". Tulis output langsung menggunakan tag HTML dasar seperti <p>, <strong>, <ul>, dan <li>. Jangan gunakan format Markdown.`;
+  const userPrompt = `Berikut data instrumen dasar siswa:\n\n${summaryText}\n\nBerikan analisis mendalam 3 bagian:\n1. <strong>Analisis Kesiapan & Potensi Mismatch</strong>\n2. <strong>Rencana Aksi Adaptasi Siswa</strong>\n3. <strong>Rekomendasi Strategi untuk Guru BK</strong>`;
   try {
     // Kirim ke backend Vercel — API key TIDAK ada di sini, aman dari browser
     const response = await fetch("/api/analisis", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ summaryText })
+      body: JSON.stringify({ summaryText, systemPrompt, userPrompt })
     });
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data = await response.json();
     loading.style.display = 'none';
     resultBox.style.display = 'block';
-    resultBox.innerHTML = data.result;
+    resultBox.innerHTML = data.content;
     btn.style.display = 'inline-block';
     btn.innerHTML = '<i class="ti ti-refresh"></i> Analisis Ulang';
-    document.getElementById('btn-print-ai').style.display = 'inline-flex';
+
   } catch (error) {
     loading.style.display = 'none';
     btn.style.display = 'inline-block';
@@ -1768,77 +1842,33 @@ async function uploadKeGoogleDrive() {
   try {
     let aiFormatted = '';
     if (aiText) {
-      // Fungsi strip HTML ke teks bersih
-      const stripHTML = (html) => {
-        const tmp = document.createElement('div');
-        tmp.innerHTML = html;
-        // Tambah newline sebelum block elements
-        tmp.querySelectorAll('p,br,li,h1,h2,h3,h4').forEach(el => {
-          if (el.tagName === 'LI') el.insertAdjacentText('beforebegin', '\n  • ');
-          else el.insertAdjacentText('afterend', '\n');
-        });
-        return (tmp.textContent || tmp.innerText || '')
-          .replace(/\n{3,}/g, '\n\n').trim();
-      };
-
-      // Deteksi 3 bagian berdasarkan <strong> heading
+      // Konversi HTML AI ke teks bersih dengan menjaga struktur paragraf & list
       const tmp = document.createElement('div');
       tmp.innerHTML = aiText;
-      const strongs = Array.from(tmp.querySelectorAll('strong'));
-      const headings = strongs.filter(s => s.textContent.length > 10);
+      // Sisipkan newline pada elemen blok sebelum ambil textContent
+      tmp.querySelectorAll('p, br, h1, h2, h3, h4, h5, h6').forEach(el => {
+        el.insertAdjacentText('afterend', '\n');
+      });
+      tmp.querySelectorAll('li').forEach(el => {
+        el.insertAdjacentText('beforebegin', '\n  • ');
+      });
+      const plainText = (tmp.textContent || tmp.innerText || '')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
 
-      let sections = [];
-      if (headings.length >= 3) {
-        // Ambil teks antara heading satu ke berikutnya
-        headings.slice(0, 3).forEach((h, i) => {
-          const title = h.textContent.trim();
-          // Kumpulkan node sesudah heading ini sampai heading berikutnya
-          let content = '';
-          let node = h.closest('p') ? h.closest('p').nextSibling : h.nextSibling;
-          const nextH = headings[i + 1];
-          while (node) {
-            if (nextH && (node === nextH || node === nextH.closest('p'))) break;
-            if (node.outerHTML) content += node.outerHTML;
-            else if (node.textContent) content += node.textContent;
-            node = node.nextSibling;
-          }
-          const cleanContent = stripHTML(content)
-            .split('\n')
-            .map(l => l.trim())
-            .filter(l => l)
-            .map(l => l.startsWith('•') ? '  ' + l : '  ' + l)
-            .join('\n');
-          sections.push({ title, content: cleanContent });
-        });
-      } else {
-        // Fallback: tidak ada heading jelas, bagi per paragraf
-        const plain = stripHTML(aiText);
-        sections = [{ title: 'ANALISIS', content: plain }];
-      }
-
-      // Bangun format ala summary
-      const sectionLabels = [
-        'ANALISIS KESIAPAN & POTENSI MISMATCH',
-        'RENCANA AKSI ADAPTASI SISWA',
-        'REKOMENDASI STRATEGI UNTUK GURU BK'
-      ];
-      const lines = [
+      aiFormatted = [
         '',
         '==========================================',
         '        ANALISIS AI — GROQ                ',
         '   Pakar Konseling Karir & Guru BK        ',
         '==========================================',
-        ''
-      ];
-      sections.forEach((sec, i) => {
-        lines.push(sectionLabels[i] || sec.title.toUpperCase());
-        lines.push(sec.content);
-        lines.push('');
-      });
-      lines.push('----------------------------------------------------------------------');
-      lines.push(' Dihasilkan oleh: Groq AI (llama-3.3-70b-versatile)');
-      lines.push('======================================================================');
-      aiFormatted = lines.join('\n');
+        '',
+        plainText,
+        '',
+        '----------------------------------------------------------------------',
+        ' Dihasilkan oleh: Groq AI (llama-3.3-70b-versatile)',
+        '======================================================================'
+      ].join('\n');
     }
 
     const summaryFinal = aiFormatted ? txtSummary + aiFormatted : txtSummary;
